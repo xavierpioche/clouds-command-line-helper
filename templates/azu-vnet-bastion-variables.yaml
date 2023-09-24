@@ -1,0 +1,8 @@
+variablescopes:
+- { isCodeisLinux: false, 
+    BastionName: MyBastion,
+    BastionPublicIp: MyReservedIp,
+    BastionResourceGroup: MyResourceGroup,
+    BastionVnetName: vnet-1,
+    BastionLocation: us-east2
+}

@@ -1,0 +1,5 @@
+{% for scope in variablescopes.variablescopes %}
+az group create {% if scope.isCodeisLinux %}\{% else %}^{% endif %}
+    --name {{ scope.ResourceGroupName }} {% if scope.isCodeisLinux %}\{% else %}^{% endif %}
+    --location {{ scope.ResourceGroupLocation }}
+{% endfor %}

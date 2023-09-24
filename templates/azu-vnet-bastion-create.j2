@@ -1,0 +1,8 @@
+{% for scope in variablescopes.variablescopes %}
+az network bastion create {% if scope.isCodeisLinux %}\{% else %}^{% endif %}
+    --name {{ scope.BastionName }} {% if scope.isCodeisLinux %}\{% else %}^{% endif %}
+    --public-ip-address {{ scope.BastionPublicIp }} {% if scope.isCodeisLinux %}\{% else %}^{% endif %}
+    --resource-group {{ scope.BastionResourceGroup }} {% if scope.isCodeisLinux %}\{% else %}^{% endif %}
+    --vnet-name {{ scope.BastionVnetName }} {% if scope.isCodeisLinux %}\{% else %}^{% endif %}
+    --location {{ scope.BastionLocation }}
+{% endfor %}

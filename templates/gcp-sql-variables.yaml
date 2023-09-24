@@ -1,0 +1,14 @@
+variablescopes:
+- { isCodeisLinux: false,
+    SqlName: test-db,
+    SqlProject: my-project,
+    SqlRegion: europe-west9,
+    SqlAllowedPscProject: my-other-project,
+    SqlVersion: POSTGRES_15,
+    SqlEdition: enterprise,
+    SqlSizeCpu: 1,
+    SqlSizeMem: 4,
+    SqlSizeHdd: 10,
+    SqlPassword: Ch4ngeME971,
+    SqlStorageType: HDD
+  }

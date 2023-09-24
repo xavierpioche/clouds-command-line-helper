@@ -1,0 +1,13 @@
+variablescopes:
+- { isCodeisLinux: false,
+    VmName: instance-1,
+    VmProject: my-project,
+    VmOsImage: debian-12,
+    VmOsImageProject: debian-cloud,
+    VmMachineType: e2-medium,
+    VmZoneLocation: europe-west9-a,
+    VmVpcName: my-vpc,
+    VmVpcSubnet: subnet-1,
+    VmIsPublic: false,
+    VmIsShielded: true
+}

@@ -1,0 +1,10 @@
+variablescopes:
+- { isCodeisLinux: false,
+    ResourceGroupName: MyResGrp,
+    ResourceGroupLocation: eastus2
+  }
+
+- { isCodeisLinux: false,
+    ResourceGroupName: YourResGrp,
+    ResourceGroupLocation: westus1
+  }  

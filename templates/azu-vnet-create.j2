@@ -1,0 +1,8 @@
+{% for scope in variablescopes.variablescopes %}
+az network vnet create {% if scope.isCodeisLinux %}\{% else %}^{% endif %}
+    --name {{ scope.VnetName }} {% if scope.isCodeisLinux %}\{% else %}^{% endif %}
+    --resource-group {{ scope.VnetResourceGroup}} {% if scope.isCodeisLinux %}\{% else %}^{% endif %}
+    --address-prefix {{ scope.VnetPrimaryAddressPrefix }} {% if scope.isCodeisLinux %}\{% else %}^{% endif %}
+    --subnet-name {{ scope.VnetPrimarySubnetName }} {% if scope.isCodeisLinux %}\{% else %}^{% endif %}
+    --subnet-prefixes {{ scope.VnetPrimarySubnetPrefix }}
+{% endfor %}

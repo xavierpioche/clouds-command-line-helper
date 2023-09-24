@@ -1,0 +1,3 @@
+{% for scope in variablescopes.variablescopes %}
+gcloud sql instances describe {{ scope.SqlName }} 
+{% endfor %}

@@ -1,0 +1,1 @@
+gcloud compute instances describe instance-1 --zone=europe-west9-a

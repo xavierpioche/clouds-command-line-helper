@@ -1,0 +1,7 @@
+variablescopes:
+- { isCodeisLinux: false,
+    VpcSubnetName: subnet-1,
+    VpcSubnetParentName: my-vpc,
+    VpcSubnetRange: 10.0.1.0/24,
+    VpcSubnetLocation: europe-west9
+}

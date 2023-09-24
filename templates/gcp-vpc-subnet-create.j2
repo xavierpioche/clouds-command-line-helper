@@ -1,0 +1,7 @@
+{% for scope in variablescopes.variablescopes %}
+gcloud compute networks subnets create {{ scope.VpcSubnetName }} {% if scope.isCodeisLinux %}\{% else %}^{% endif %}
+        --network={{ scope.VpcSubnetParentName }} {% if scope.isCodeisLinux %}\{% else %}^{% endif %}
+        --range={{ scope.VpcSubnetRange }} {% if scope.isCodeisLinux %}\{% else %}^{% endif %}
+        --region={{ scope.VpcSubnetLocation }} {% if scope.isCodeisLinux %}\{% else %}^{% endif %}
+        --enable-private-ip-google-access
+{% endfor %}

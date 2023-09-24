@@ -1,0 +1,6 @@
+{% for scope in variablescopes.variablescopes %}
+az network vnet subnet delete {% if scope.isCodeisLinux %}\{% else %}^{% endif %}
+    --name {{ scope.SubnetName }} {% if scope.isCodeisLinux %}\{% else %}^{% endif %}
+    --resource-group {{ scope.SubnetResourceGroup }} {% if scope.isCodeisLinux %}\{% else %}^{% endif %}
+    --vnet-name {{ scope.SubnetParentVnetName }}
+{% endfor %}

@@ -1,0 +1,5 @@
+{% for scope in variablescopes.variablescopes %}
+az network bastion delete {% if scope.isCodeisLinux %}\{% else %}^{% endif %}
+    --name {{ scope.BastionName }} {% if scope.isCodeisLinux %}\{% else %}^{% endif %}
+    --resource-group {{ scope.BastionResourceGroup }}
+{% endfor %}

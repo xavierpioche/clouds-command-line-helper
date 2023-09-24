@@ -1,0 +1,1 @@
+gcloud compute instances delete instance-1 --zone=europe-west9-a --delete-disks=all 

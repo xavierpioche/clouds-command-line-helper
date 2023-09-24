@@ -1,0 +1,15 @@
+variablescopes:
+- { isCodeisLinux: false, 
+    VmName: my-new-vm,
+    VmResourceGroup: my-new-rg,
+    VmOsImage: MicrosoftWindowsDesktop:Windows-11:win11-21h2-pro:latest,
+    VmSizeType: Standard_B2s,
+    VmVnetName: vnet-1,
+    VmSubnetName: subnet-1,
+    VmAuthMethod: password,
+    VmAdminUser: azureuser,
+    VmAdminPass: D0notK33piT+h,
+    VmLocation: eastus2,
+    VmPublicIp: '""',
+    VmOsType: windows
+}

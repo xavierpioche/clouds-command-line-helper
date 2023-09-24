@@ -1,0 +1,6 @@
+{% for scope in variablescopes.variablescopes %}
+az group delete \
+    --name {{ scope.ResourceGroupName }} {% if scope.isCodeisLinux %}\{% else %}^{% endif %}
+    --no-wait {% if scope.isCodeisLinux %}\{% else %}^{% endif %}
+    --yes
+{% endfor %}

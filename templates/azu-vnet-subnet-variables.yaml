@@ -1,0 +1,13 @@
+variablescopes:
+- { isCodeisLinux: false, 
+    SubnetName: subnet-2,
+    SubnetResourceGroup: my-rg,
+    SubnetParentVnetName: vnet-1,
+    SubnetAddressPrefix: 10.0.2.0/24
+  }
+- { isCodeisLinux: false, 
+    SubnetName: subnet-3,
+    SubnetResourceGroup: my-rg,
+    SubnetParentVnetName: vnet-1,
+    SubnetAddressPrefix: 10.0.3.0/24
+  }

@@ -1,0 +1,4 @@
+{% for scope in variablescopes.variablescopes %}
+gcloud compute networks subnets create {{ scope.VpcSubnetName }} {% if scope.isCodeisLinux %}\{% else %}^{% endif %}
+        --region={{ scope.VpcSubnetLocation }}
+{% endfor %}

@@ -1,0 +1,6 @@
+variablescopes:
+- { isCodeisLinux: false, 
+    PublicIpResourceGroup: MyResourceGroup,
+    PublicIpName: MyPubIp,
+    PublicIpLocation: eastus2
+}

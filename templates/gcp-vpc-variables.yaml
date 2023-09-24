@@ -1,0 +1,4 @@
+variablescopes:
+- { isCodeisLinux: false,
+    VpcName: my-vpc
+}

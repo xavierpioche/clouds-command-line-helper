@@ -1,0 +1,8 @@
+{% for scope in variablescopes.variablescopes %}
+gcloud sql instances create {{ scope.SqlName }} --project={{ scope.SqlProject }} {% if scope.isCodeisLinux %}\{% else %}^{% endif %}
+ --region={{ scope.SqlRegion }} {% if scope.isCodeisLinux %}\{% else %}^{% endif %}
+ --enable-private-service-connect --allowed-psc-projects={{ scope.SqlAllowedPscProject }} {% if scope.isCodeisLinux %}\{% else %}^{% endif %}
+ --availability-type=regional --database-version={{ scope.SqlVersion }} --edition={{ scope.SqlEdition }} {% if scope.isCodeisLinux %}\{% else %}^{% endif %}
+ --cpu={{ scope.SqlSizeCpu }} --memory={{ scope.SqlSizeMem }} --storage-size={{ scope.SqlSizeHdd }} {% if scope.isCodeisLinux %}\{% else %}^{% endif %}
+ --root-password={{ scope.SqlPassword }} --no-assign-ip --storage-auto-increase --storage-type={{ scope.SqlStorageType }}
+{% endfor %}

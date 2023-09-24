@@ -1,0 +1,13 @@
+variablescopes:
+- { VmName: instance-1,
+    VmProject: oca-infra-xp-lab,
+    VmOsImage: rhel-8,
+    VmOsImageProject: rhel-cloud,
+    VmMachineType: e2-medium,
+    VmZoneLocation: europe-west9-a,
+    VmVpcName: lab-test-project,
+    VmVpcSubnet: back,
+    VmIsPublic: false,
+    VmIsShielded: true,
+    isCodeisLinux: false
+  }

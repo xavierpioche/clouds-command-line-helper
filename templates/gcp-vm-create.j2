@@ -1,0 +1,10 @@
+{% for scope in variablescopes.variablescopes %}
+    gcloud compute instances create {{ scope.VmName }} {% if scope.isCodeisLinux %}\{% else %}^{% endif %}
+        --project={{ scope.VmProject }} {% if scope.isCodeisLinux %}\{% else %}^{% endif %}
+        --image-family={{ scope.VmOsImage }} {% if scope.isCodeisLinux %}\{% else %}^{% endif %}
+        --image-project={{ scope.VmOsImageProject }} {% if scope.isCodeisLinux %}\{% else %}^{% endif %}
+        --machine-type={{ scope.VmMachineType }} {% if scope.isCodeisLinux %}\{% else %}^{% endif %}
+        --zone={{ scope.VmZoneLocation }} {% if scope.isCodeisLinux %}\{% else %}^{% endif %}
+        --network-interface=network={{ scope.VmVpcName }},stack-type=IPV4_ONLY,subnet={{ scope.VmVpcSubnet }}{%- if not scope.VmIsPublic -%},no-address{% endif %} {% if scope.isCodeisLinux %}\{% else %}^{% endif %}
+        {% if scope.VmIsShielded %}--shielded-secure-boot --shielded-vtpm --shielded-integrity-monitoring {% endif %}
+{% endfor %}

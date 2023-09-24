@@ -1,0 +1,8 @@
+{% for scope in variablescopes.variablescopes %}
+az network public-ip create {% if scope.isCodeisLinux %}\{% else %}^{% endif %}
+    --resource-group {{ scope.PublicIpResourceGroup }} {% if scope.isCodeisLinux %}\{% else %}^{% endif %}
+    --name {{ scope.PublicIpName }} {% if scope.isCodeisLinux %}\{% else %}^{% endif %}
+    --sku Standard {% if scope.isCodeisLinux %}\{% else %}^{% endif %}
+    --location {{ scope.PublicIpLocation }} {% if scope.isCodeisLinux %}\{% else %}^{% endif %}
+    --zone 1 2 3
+{% endfor %}

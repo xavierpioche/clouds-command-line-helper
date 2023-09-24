@@ -1,0 +1,8 @@
+variablescopes:
+- { isCodeisLinux: false, 
+    VnetName: vnet-1,
+    VnetResourceGroup: MyResourceGroup,
+    VnetPrimaryAddressPrefix: 10.0.0.0/16,
+    VnetPrimarySubnetName: subnet-1,
+    VnetPrimarySubnetPrefix: 10.0.0.0/24
+}

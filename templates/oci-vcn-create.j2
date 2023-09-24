@@ -1,0 +1,3 @@
+{% for scope in variablescopes.variablescopes %}
+oci network vcn create --compartment-id {{ scope.VcnCompartmentId }} --cidr-blocks '["{{ scope.VcnCidrBlocks1 }}","{{ scope.VcnCidrBlocks2 }}"]' --display-name '{{ scope.VcnName }}' --dns-label '{{ scope.VcnDnsDomain }}'
+{% endfor %}

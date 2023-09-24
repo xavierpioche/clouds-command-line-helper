@@ -1,0 +1,5 @@
+{% for scope in variablescopes.variablescopes %}
+az network public-ip delete {% if scope.isCodeisLinux %}\{% else %}^{% endif %}
+    --name {{ scope.PublicIpName }} {% if scope.isCodeisLinux %}\{% else %}^{% endif %}
+    --resource-group {{ scope.PublicIpResourceGroup }}
+{% endfor %}
