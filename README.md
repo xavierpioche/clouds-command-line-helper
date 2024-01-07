@@ -4,7 +4,7 @@ A set of common command lines to use aws, gcp, azu and oci formatted in jinja2 t
 
 ## Installation 
 
-In the "scopes" directory, there are the file for variables values in yaml format. You should put different files with your own naming convention according to your projects. 
+In the "scopes" directory, you put the files for variables values in yaml format. You should create different files with your own naming convention according to your projects. 
 
 ## Usage
 
